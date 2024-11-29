@@ -8,6 +8,7 @@ from .serializers import DepartmentSerializer, EmployeeSerializer, ProjectSerial
 from django.utils import timezone
 
 class DepartmentListView(APIView):
+    
     def get(self, request):
         departments = Department.objects.all()
         serializer = DepartmentSerializer(departments, many=True)
